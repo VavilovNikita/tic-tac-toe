@@ -18,4 +18,12 @@ public final class Cell {
     public int getCol() {
         return col;
     }
+
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "row=" + row +
+                ", col=" + col +
+                '}';
+    }
 }
