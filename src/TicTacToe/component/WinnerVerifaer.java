@@ -1,4 +1,6 @@
-package TicTacToe;
+package TicTacToe.component;
+
+import TicTacToe.model.GameTable;
 
 public class WinnerVerifaer {
     public boolean isUserWin(final GameTable gameTable) {
