@@ -15,7 +15,7 @@ public class Game {
     public Game(final DataPrinter dataPrinter,
                 final ComputerMove computerMove,
                 final UserMove userMove,
-                final WinnerVerifaer winnerVerifaer,
+                WinnerVerifaer winnerVerifaer,
                 final DrawVerifaer drawVerifaer) {
         this.dataPrinter = dataPrinter;
         this.computerMove = computerMove;
@@ -36,7 +36,7 @@ public class Game {
         while (true) {
             userMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
-            if (winnerVerifaer.isUserWin(gameTable)) {
+            if (winnerVerifaer.isUserWin(gameTable, 'X')) {
                 System.out.println("YOU WIN");
                 break;
             }
