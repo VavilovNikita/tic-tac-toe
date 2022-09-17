@@ -36,7 +36,7 @@ public class Game {
         while (true) {
             userMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
-            if (winnerVerifaer.isUserWin(gameTable, 'X')) {
+            if (winnerVerifaer.isUserWin(gameTable)) {
                 System.out.println("YOU WIN");
                 break;
             }

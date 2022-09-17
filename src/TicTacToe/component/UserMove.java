@@ -19,8 +19,8 @@ public class UserMove {
                 for (int i = 0; i < MappingTable.length; i++) {
                     for (int j = 0; j < MappingTable[i].length; j++) {
                         if (MappingTable[i][j] == digit) {
-                            if (gameTable.getSign(new Cell((i),(j))) == ' ') {
-                                gameTable.setSign(new Cell((i),(j)),'X');
+                            if (gameTable.getSign(new Cell(i,j)) == ' ') {
+                                gameTable.setSign(new Cell(i,j),'X');
                             } else {
                                 System.out.println("point " + EnterNumber + " not empty. Try again");
                                 make(gameTable);
