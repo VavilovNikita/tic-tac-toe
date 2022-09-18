@@ -38,19 +38,9 @@ public class WinnerVerifaer {
     }
 
     private boolean isWinnerByMailDiagonal(final GameTable gameTable, final char ch) {
-        int setSymbol = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 2; j >= 0; j--) {
-                if (gameTable.getSign(new Cell((i), (j))) == 'X') {
-                    setSymbol++;
-                }
-            }
-            if (setSymbol == 3) {
-                return true;
-            } else {
-                setSymbol = 0;
-            }
-        }
+       if(gameTable.getSign(new Cell(0,2)) == ch && gameTable.getSign(new Cell(1,1)) == ch && gameTable.getSign(new Cell(2,0)) == ch){
+           return true;
+       }
         return false;
     }
 
