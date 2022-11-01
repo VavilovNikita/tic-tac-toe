@@ -1,7 +1,7 @@
 <!-- https://maven.apache.org/plugins/maven-assembly-plugin/assembly.html -->
 <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.0 http://maven.apache.org/xsd/assembly-2.1.0.xsd">
-    <id>windows</id>
+    <id>windows-with-JRE</id>
     <formats>
         <format>zip</format>
     </formats>
@@ -21,6 +21,10 @@
             </includes>
             <lineEnding>windows</lineEnding>
             <filtered>true</filtered>
+        </fileSet>
+        <fileSet>
+            <directory>.tmp\jre11-windows</directory>
+            <outputDirectory>jre</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>

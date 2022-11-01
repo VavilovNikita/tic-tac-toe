@@ -1,0 +1,1 @@
+jlink --add-modules=java.base --compress=2 --no-header-files --no-man-pages --output .tmp\jre11-windows
